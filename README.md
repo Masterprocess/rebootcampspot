@@ -1,2 +1,2 @@
-# unc_assign_20_react_news
-UNC Boot Camp Assignment 20 NYTimes React
+# rebootcampspot
+Welcome to ReBootCampSpot! This project endeavors to replace the crapola we've been using in the UNC Coding Bootcamp!
