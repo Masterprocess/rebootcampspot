@@ -1,31 +1,77 @@
-import React from 'react';
-import './Nav.css';
+// Imports dependencies
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
-const Nav = () => (
-  <header>
-    <div className="navbar-fixed">
-      <nav>
-        <div className="nav-wrapper container">
-          <a href="/" className="brand-logo">NYT News Scraper</a>
-          <a href="#" data-activates="mobile-menu" className="button-collapse"><i className="material-icons">menu</i></a>
-          <ul className="right hide-on-med-and-down">
-            <li><a href="#search">Search</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#saved">Saved</a></li>
-          </ul>
-        </div>
-      </nav>
+// Depending on the current path, this component sets the "active" class on the appropriate navigation link item
+const Navbar = props =>
+  <nav className="nav-extended main-nav">
+    <div className="nav-wrapper">
+      {/* Webpage Logo */}
+      <Link to="/">
+        <p className="brand-logo" >reBootcampSpot</p>
+      </Link>
+
+      {/* Mobile: Creates burger icon */}
+      <a href="/" data-activates="mobile-demo" className="button-collapse">
+        <i className="material-icons">menu</i>
+      </a>
+
+      {/* Right side Navbar links */}
+      <ul id="nav-mobile" className="right hide-on-med-and-down">
+        {/* Link to Main Home Page */}
+        <li 
+          className={ window.location.pathname === "/" ? "active" : "" }
+        >
+          <Link to="/">Dashboard</Link>
+        </li>
+
+        {/* Link to Saved Articles */}
+        <li 
+          className={ window.location.pathname === "/calendar" ? "active" : "" }
+        >
+          <Link to="/calendar">Calendar</Link>
+        </li>
+        <li 
+          className={ window.location.pathname === "/stats" ? "active" : "" }
+        >
+          <Link to="/stats">Stats</Link>
+        </li>
+
+        {/* Link to Repo */}
+        <li>
+          <a href="https://github.com/Masterprocess/rebootcampspot">Repo</a>
+        </li>
+      </ul>
+
+      {/* Mobile: Navbar links */}
+      <ul className="side-nav" id="mobile-demo">
+        {/* Link to Dashboard Page */}
+        <li 
+          className={ window.location.pathname === "/" ? "active" : "" }
+        >
+          <Link to="/">Dashboard</Link>
+        </li>
+
+        {/* Link to Saved Articles */}
+        <li 
+          className={ window.location.pathname === "/calendar" ? "active" : "" }
+        >
+          <Link to="/calendar">Calendar</Link>
+        </li>
+
+        <li 
+          className={ window.location.pathname === "/stats" ? "active" : "" }
+        >
+          <Link to="/stats">Stats</Link>
+        </li>
+
+        {/* Link to Repo */}
+        <li>
+          <a href="https://github.com/Masterprocess/rebootcampspot">Repo</a>
+        </li>
+      </ul>
     </div>
-    <ul className="side-nav" id="mobile-menu">
-      <h5 className="side-navbar-title">Menu</h5>
-      <hr />
-      <li><a href="#search"><i className="material-icons">search</i>Search</a></li>
-      <li><a href="#results"><i className="material-icons">library_books</i>Results</a></li>
-      <li><a href="#saved"><i className="material-icons">save</i>Saved</a></li>
-    </ul>
-  </header>
-);
+  </nav>;
 
-export default Nav;
+export default Navbar;
