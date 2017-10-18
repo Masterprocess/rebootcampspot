@@ -11,8 +11,22 @@ const App = () =>
       <Nav />
       <Panel />
       <Switch>
-        <Route exact path="/" component={Main} />
-        <Route exact path="/books" component={Main} />
+        const App = () =>
+  <Router>
+    <div>
+      <Navbar />
+      <Wrapper>
+        <Route exact path="/" component={Dashboard} />
+        <Route exact path="/Dashboard" component={DashBoard} />
+        <Route exact path="/calendar" component={Calendar} />
+        <Route exact path="/stats" component={Stats} />
+      </Wrapper>
+      <Footer />
+    </div>
+  </Router>;
+
+export default App;
+
       </Switch>
     </div>
   </Router>;

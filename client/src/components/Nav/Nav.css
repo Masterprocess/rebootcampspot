@@ -1,15 +1,20 @@
-/* Navigation */
-.side-navbar-title {
-  margin-left: 1.25rem;
+.brand-logo {
+  margin-left: 20px;
+  font-family: "Helvetica"
+  font-style: "normal";
+  letter-spacing: 0px;
+  color: #000 !important;
 }
-
-.side-nav li > a > i.material-icons {
-  margin-right: 16px;
-}
-
-@media only screen and (max-width: 400px) {
-  /* Navigation */
-  nav .brand-logo {
-    font-size: 1.7rem;
+  .brand-logo:hover,
+  .brand-logo:active,
+  .brand-logo:focus {
+    text-decoration: none;
   }
+
+.main-nav {
+  background-color: #FFF;
+}
+
+a {
+  color: #000 !important;
 }
