@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
+import Nav from "../components/Nav"
+import Footer from "../components/Footer"
 
 class Dashboard extends Component {
 	state = {
@@ -36,4 +38,4 @@ render() {
 }
 
 
-export default calendar;        
+export default Calendar;        

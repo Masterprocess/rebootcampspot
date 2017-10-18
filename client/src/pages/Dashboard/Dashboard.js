@@ -6,6 +6,7 @@ import Footer from "../components/Footer"
 
 class Dashboard extends Component {
 	state = {
+    
 
 render() {
     return(
@@ -39,4 +40,4 @@ render() {
 }
 
 
-export default dashboard; 
+export default Dashboard; 

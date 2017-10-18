@@ -8,7 +8,7 @@ import Footer from "../components/Footer"
 
 
 
-render() {
+const Login = () => {
 	return (
 		<Nav />
 			<Container fluid>
