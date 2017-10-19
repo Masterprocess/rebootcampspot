@@ -1,8 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+
 
 class Dashboard extends Component {
 	state = {
@@ -11,8 +10,7 @@ class Dashboard extends Component {
 
 render() {
     return(
-       <Nav />
-       <Jumbotron>
+         <Jumbotron>
        <h1>Calendar</h1>
        </Jumbotron>
         <Container>
@@ -32,7 +30,7 @@ render() {
                     </Col>
             </Row>
         </Container>
-      <Footer />
+      
 );
 }
 }
