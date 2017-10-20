@@ -1,30 +1,72 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import { Col, Row, Container } from "../components/Grid";
-import loginform from "../components/LoginForm";
+import React, { Component } from "react";
+import { Col, Row, Container } from "../../components/Grid";
+import { Link } from "react-router-dom";
+import { Input, TextArea, FormBtn } from "../../components/Form";
+import DeleteBtn from "../../components/DeleteBtn";
+import Jumbotron from "../../components/Jumbotron";
+import API from "../../utils/API";
+import { List, ListItem } from "../../components/List";
 
+class Login extends Component {
+	state = {
+    userName: "",
+    password: ""
+  };
 
+componentDidMount() {
 
+  handleInputChange = event => {
+    // Getting the value and name of the input which triggered the change
+    let value = event.target.value;
+    const name = event.target.name;
 
+    if (name === "password") {
+      value = value.substring(0, 15);
+    }
+    // Updating the input's state
+    this.setState({
+      [name]: value
+    });
+  };
 
-const Login = () => {
-	return (
-		
-			<Container fluid>
-				<Row>
-					<Col size="md-12">
-						<h1>
-						Please Sign In
-						</h1>
-					</Col>
-				</Row>
-				<Row>
-					<Col size="md-12">
-						<loginform />
-					</Col>
-				</Row>
-				
-);
-}
+  handleFormSubmit = event => {
+    // Preventing the default behavior of the form submit (which is to refresh the page)
+    event.preventDefault();
+    
+    this.setState({
+      userName: "",
+      password: ""
+    });
+  };
+
+  render() {
+    // Notice how each input has a `value`, `name`, and `onChange` prop
+    return (
+      <div>
+      <Container fluid>
+      	<Row>
+      		 <Col size="md-12">
+        		<h1>Please Sign In</h1>
+        	 </Col>
+          <form className="form">
+          <input
+            value={this.state.userName}
+            name="userName"
+            onChange={this.handleInputChange}
+            type="text"
+            placeholder="User Name" />
+    
+          
+          <input
+            value={this.state.password}
+            name="password"
+            onChange={this.handleInputChange}
+            type="password"
+            placeholder="Password"
+          />
+          <button onClick={this.handleFormSubmit}>Submit</button>
+        </form>
+    );
+  }
 }
 export default Login;
