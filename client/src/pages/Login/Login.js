@@ -27,13 +27,9 @@ const Login = () => {
 						<loginform />
 					</Col>
 				</Row>
-<<<<<<< HEAD
-				
-=======
 					<Footer />
 					</Container>
 				</div>
->>>>>>> chris
 );
 }
 
