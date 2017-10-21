@@ -1,17 +1,19 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Row, Container } from "../components/Grid";
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+import { Col, Row, Container } from "../../components/Grid";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Jumbotron from "../../components/Jumbotron";
 
-class Dashboard extends Component {
+class Stats extends Component {
     state = {
-
+		}
 render() {
     return(
+			<div>
       <Nav />
       <Jumbotron>
-      <Class Stats
+      <div className="Stats"/>
       </Jumbotron>
         <Container>
              <Row>
@@ -23,10 +25,11 @@ render() {
                     </Col>
             </Row>        
         </Container>
-      <Footer />
+			<Footer />
+			</div>
 );
 }
 }
 
 
-export default stats; 
+export default Stats; 

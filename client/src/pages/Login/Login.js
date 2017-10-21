@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Col, Row, Container } from "../components/Grid";
-import loginform from "../components/LoginForm";
-import Nav from "../components/Nav"
-import Footer from "../components/Footer"
+import Col from "../../components/Grid";
+import Row from "../../components/Grid";
+import Container from "../../components/Grid";
+import loginform from "../../components/LoginForm";
+import Nav from "../../components/Nav"
+import Footer from "../../components/Footer"
 
 
 
 
 const Login = () => {
 	return (
+		<div>
 		<Nav />
 			<Container fluid>
 				<Row>
@@ -25,7 +28,9 @@ const Login = () => {
 					</Col>
 				</Row>
 					<Footer />
+					</Container>
+				</div>
 );
 }
-}
+
 export default Login;
