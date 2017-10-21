@@ -54,6 +54,7 @@ class Main extends Component {
 
   render() {
     return (
+			<div>
       <div className="container containers">
         <h4 id="search">Search for Articles</h4>
         <div className="row">
@@ -130,7 +131,9 @@ class Main extends Component {
         ) : (
           <h4 id="results">Search to display results here</h4>
         )}
-      </div>
+			</div>
+			
+			</div>
     );
   }
 }

@@ -1,14 +1,32 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Col, Row, Container } from "../components/Grid";
 import table from "../components/table"
+=======
+import Col from "../../components/Grid";
+import Row from "../../components/Grid";
+import Container from "../../components/Grid";
+import Nav from "../../components/Nav";
+import Footer from "../../components/Footer";
+import Jumbotron from "../../components/Jumbotron";
+
+
+>>>>>>> chris
 
 class Dashboard extends Component {
 	state = {
+
+	}
     
 
 render() {
     return(
+<<<<<<< HEAD
+=======
+			<div>
+			 <Nav />
+>>>>>>> chris
        <Jumbotron>
        <h1>Dashboard</h1>
        </Jumbotron>
@@ -32,8 +50,15 @@ render() {
                     </Col>
             </Row>
         </Container>
+<<<<<<< HEAD
   
 );
+=======
+			<Footer />
+			</div>
+
+)
+>>>>>>> chris
 }
 }
 
